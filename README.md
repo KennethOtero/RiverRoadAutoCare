@@ -4,4 +4,4 @@ This capstone project provided a software solution for a small automotive repair
 I developed the database for the application, as well as the home page, services, reset password, and review pages. I also created the front end of all the forms, such as update/add user information. 
 
 You can find the website here: http://itd1.cincinnatistate.edu/CPDM-OteroK/ 
-Note: The website is currently hosted at Cincinnati State, and as a former student it may be taken offline.
+Note: The website is currently hosted at Cincinnati State, and as a former student it may be taken offline. If this is the case, you can find a demo here: https://youtu.be/1XS2KC_pxiM
