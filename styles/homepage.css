@@ -1,0 +1,420 @@
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    /* Remove listings when zoomed in */
+    .menubar li:not(:first-child) {
+        display: none;
+    }
+
+    /* Remove listings when zoomed in */
+    .topbar li:not(:first-child) {
+        display: none;
+    }
+
+    /* Reduce logo size when zoomed in */
+    .Logo a {
+        font-size: 2.0em; 
+    }
+}
+
+/* ============= Navigation Bar ============== */
+
+/* Make it so that the header stays at the top */
+head {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Style the top bar */
+.topbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0075db;
+}
+
+/* Style the info in the top bar */
+.topbar li {
+    display: inline;
+    float: left;
+    display: block;
+    padding: 8px 16px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the navigation bar */
+.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #424242;
+}
+
+/* style the links in the navigation (menu) bar */
+.menubar li a {
+    display: block;
+    width: 60px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* put the login button at the right */
+.menubar li:last-child {
+    float: right;
+}
+
+/* style the links in the navigation bar */
+.menubar a {
+    float: left;
+    display: block;
+    padding: 8px;
+}
+
+/* Make the current button blue when hovering over it */
+.menubar li a:hover {
+    background-color: #0075db;
+}
+
+.menubar ul li a:active {
+    background-color: #0075db;
+}
+
+/* Adjust the car background image */
+.CarImage {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 100% 85%;
+    display: block;
+}
+
+/* Adjust the River Road Auto Care text on top of the car image */
+.Logo a {
+    position: absolute;
+    top: 33px;
+    margin-left: 100px;
+    color: #fff;
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    letter-spacing: 2px;
+    padding: 8px;
+}
+
+/* Style login menu */
+.MenuAction .MenuItems {
+    bottom: -215px;
+    right: 5px;
+    position: absolute;
+    padding-top: 15px;
+    background-color: #fff;
+    width: 130px;
+    filter: drop-shadow(0 0 0.75rem #424242);
+    border-radius: 12px;
+    transition: 0.10s;
+    align-items: center;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Style list items */
+.MenuAction li a {
+    font-size: 1.0em ;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #424242;
+    height: 35px;
+    width: 110px;
+    display: block;
+    padding: 0px;
+    float: none;
+    text-decoration: none;
+}
+
+/* Change text color when hovering over item */
+.MenuAction li a:hover {
+    background-color: #fff;
+    color:#0075db;
+}
+
+/* Change text color when clicking on item */
+.MenuAction ul li a:active {
+    background-color: #fff;
+    color:#0075db;
+}
+
+/* Add an arrow pointing up */
+.MenuAction .MenuItems::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+/* Show the list menu */
+.MenuAction .MenuItems.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ============= BODY ============== */
+/* Remove white space at the edges of the screen */
+body {
+    margin: 0;
+}
+
+/* ============= Welcome Screen ============== */
+
+/* style the blue separating bar under the welcome text*/
+.WelcomeScreen hr {
+    background-color: #0075db;
+    height: 3px;
+    margin-bottom: 25px;
+}
+
+/* Style the "Welcome To" part of the welcome screen */
+.WelcomeText {
+    text-align: center;
+    color: #0075db;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 0;
+    margin-top: 195px;
+}
+
+/* Style the "River Road Auto Care" welcome screen */
+.RiverRoadText {
+    text-align: center;
+    color: #0075db;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.187em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* ============= Icons ============== */
+
+/* Style the Icon section */
+.Icons {
+    color: #424242;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
+
+/* Reduce the size of the checkmark icon */
+.CheckmarkIcon {
+    height: 100px;
+    width: 100px;
+}
+
+/* Reduce the size of the team icon */
+.TeamIcon {
+    height: 100px;
+    width: 100px;
+}
+
+/* Reduce the size of the camera icon */
+.CameraIcon {
+    height: 100px;
+    width: 100px;
+}
+
+/* Style the hr after the icon section */
+.ImgSeparator {
+    margin-top: 250px;
+    background-color: #0075db;
+    height: 3px;
+    clear: left;
+}
+
+/* ============= Map Section ============== */
+
+/* Style the Google Maps image */
+.GoogleMaps {
+    height: 350px;
+    width: 40%;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 30px;
+    float: left;
+    border: 2px solid #424242;
+    border-radius: 6px;
+}
+
+/* Style the map heading */
+#FindUs {
+    color: #424242;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.875em;
+    margin-right: 100px;
+}
+
+/* Center the "Find Us!" heading */
+.Map h3 {
+    text-align: center;
+}
+
+/* Style the map text */
+.Map p {
+    color: #424242;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.Map a {
+    text-decoration: none;
+    color: #0075db;
+}
+
+/* Style the hr after the map section */
+.MapSeparator {
+    background-color: #0075db;
+    height: 3px;
+    clear: left;
+    margin-top: 300px;
+    margin-bottom: 20px;
+}
+
+/* ============= Reviews Section ============== */
+
+.NewReviews {
+    margin-left: 500px;
+    margin-right: 500px;
+    width: 50%;
+    margin: 0 auto;
+    color: #424242;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.Review {
+    border: 3px solid #0075db;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.NewReviews h3 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 1.875em;
+}
+
+.NewReviews h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.NewReviews p {
+    margin-top: 0px;
+}
+
+.NewReviews .date {
+    margin-top: 25px;
+}
+
+/* Style the star ratings */
+.NewReviews .checked {
+    color: #0075db;
+    font-size: 1.3em;
+    float: left;
+}
+
+/* Style the star ratings */
+.NewReviews .fa-star:not(.checked) {
+    color: #424242;
+    font-size: 1.3em;
+    float: left;
+}
+
+.btnNewReview {
+    color: #fff;
+    font-size: 1.0em;
+    background-color: #0075db;
+    border: none;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.SeeReviews {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0075db;
+    text-align: center;
+    padding-left: 10px;
+}
+
+/* ============= Footer ============== */
+
+/* Style the footer bar */
+.Footer hr {
+    background-color: #424242;
+    height: 3px;
+    clear: left;
+}
+
+/* Style the footer text */
+.Footer ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin-left: -35px;
+    list-style: none;
+    height: 27px;
+    display: block;
+    text-align: center;
+}
+
+.Footer h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.Footer {
+    background-color: #424242;
+    color: #fff;
+    height: 150px;
+    margin-left: 0;
+}

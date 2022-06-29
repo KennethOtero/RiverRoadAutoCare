@@ -1,0 +1,303 @@
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    /* Remove listings when zoomed in */
+    .menubar li:not(:first-child) {
+        display: none;
+    }
+
+    /* Remove listings when zoomed in */
+    .topbar li:not(:first-child) {
+        display: none;
+    }
+
+    /* Reduce logo size when zoomed in */
+    .Logo a {
+        font-size: 2.0em; 
+    }
+}
+
+/* ============= Navigation Bar ============== */
+
+/* Make it so that the header stays at the top */
+head {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Style the top bar */
+.topbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0075db;
+}
+
+/* Style the info in the top bar */
+.topbar li {
+    display: inline;
+    float: left;
+    display: block;
+    padding: 8px 16px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the navigation bar */
+.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #424242;
+}
+
+/* style the links in the navigation (menu) bar */
+.menubar li a {
+    display: block;
+    width: 60px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* put the login button at the right */
+.menubar li:last-child {
+    float: right;
+}
+
+/* style the links in the navigation bar */
+.menubar a {
+    float: left;
+    display: block;
+    padding: 8px;
+}
+
+/* Make the current button blue when hovering over it */
+.menubar li a:hover {
+    background-color: #0075db;
+}
+
+.menubar ul li a:active {
+    background-color: #0075db;
+}
+
+/* Adjust the car background image */
+.CarImage {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 100% 85%;
+    display: block;
+}
+
+/* Adjust the River Road Auto Care text on top of the car image */
+.Logo a {
+    position: absolute;
+    top: 33px;
+    margin-left: 100px;
+    color: #fff;
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    letter-spacing: 2px;
+    padding: 8px;
+}
+
+/* Style login menu */
+.MenuAction .MenuItems {
+    bottom: -215px;
+    right: 5px;
+    position: absolute;
+    padding-top: 15px;
+    background-color: #fff;
+    width: 130px;
+    filter: drop-shadow(0 0 0.75rem #424242);
+    border-radius: 12px;
+    transition: 0.10s;
+    align-items: center;
+    list-style: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Style list items */
+.MenuAction li a {
+    font-size: 1.0em ;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #424242;
+    height: 35px;
+    width: 110px;
+    display: block;
+    padding: 0px;
+    float: none;
+    text-decoration: none;
+}
+
+/* Change text color when hovering over item */
+.MenuAction li a:hover {
+    background-color: #fff;
+    color:#0075db;
+}
+
+/* Change text color when clicking on item */
+.MenuAction ul li a:active {
+    background-color: #fff;
+    color:#0075db;
+}
+
+/* Add an arrow pointing up */
+.MenuAction .MenuItems::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+
+/* Show the list menu */
+.MenuAction .MenuItems.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ============= BODY ============== */
+/* Remove white space at the edges of the screen */
+body {
+    margin: 0;
+    margin-top: 195px;
+}
+
+/* ============= Add Vehicle ============== */
+.AddVehicle form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.required {
+    margin-top: 10px;
+    color:#0075db;
+}
+
+.AddVehicle {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #424242;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #0075db;
+    border-radius: 6px;
+    padding: 10px 15px;
+    max-width: 700px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.AddVehicle h1 {
+    color:#0075db;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.AddVehicle .details {
+    color:#424242;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    clear: left;
+}
+
+form input[type="text"] {
+    height: 25px;
+    width: 100%;
+    padding-left: 15px;
+}
+
+/* Make textarea not resizable */
+textarea {
+    resize: none;
+    width: 100%;
+    border: 1px solid #424242;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #0075db;
+    border-radius: 3px;
+}
+
+/* Make border blue when in focus */
+input:focus {
+    outline: none;
+    border-color: #0075db;
+    border-radius: 3px;
+}
+
+#btnSubmit {
+    color: #fff;
+    font-size: 1.0em;
+    background-color: #0075db;
+    border: 1px solid #0075db;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ============= Footer ============== */
+
+/* Style the footer bar */
+.Footer hr {
+    background-color: #424242;
+    height: 3px;
+    clear: left;
+}
+
+/* Style the footer text */
+.Footer ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    margin-left: -35px;
+    list-style: none;
+    height: 27px;
+    display: block;
+    text-align: center;
+}
+
+.Footer h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.Footer {
+    background-color: #424242;
+    color: #fff;
+    height: 150px;
+    margin-left: 0;
+}
